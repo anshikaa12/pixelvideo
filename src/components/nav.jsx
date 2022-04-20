@@ -1,7 +1,16 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { useMobileView } from "../context/mobileViewContext";
 
 function Nav() {
+  const { mobileViewActive, setMobileViewActive } = useMobileView();
+
+  function hamClickHandler() {
+    setMobileViewActive(!mobileViewActive);
+    console.log(mobileViewActive);
+  }
+
   return (
     <nav>
       <div className="nav">
@@ -11,7 +20,7 @@ function Nav() {
             alt="text"
           />
         </div>
-        <div className="mid-nav flex-row">
+        <div className="mid-nav">
           <ul className="nav-links">
             <NavLink className="li-link-a" to="/">
               {" "}
@@ -23,7 +32,7 @@ function Nav() {
             </NavLink>
           </ul>
         </div>
-        <div className="last-nav flex-row">
+        <div className="last-nav">
           <input type="text" className="input-box" placeholder="Search" />
           <ul className="nav-connect nav-links">
             <NavLink to="/user" className="nav-connect-a li-link-a">
@@ -33,6 +42,9 @@ function Nav() {
               </li>
             </NavLink>
           </ul>
+        </div>
+        <div className="nav-ham">
+          <i class="fas fa-bars h3-text" onClick={hamClickHandler}></i>
         </div>
       </div>
     </nav>
