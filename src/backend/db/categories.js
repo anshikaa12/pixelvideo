@@ -8,20 +8,30 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "Computer Programming",
-    description:
-      "Computer programming is the process of designing and building an executable computer program to accomplish a specific computing",
+    categoryName: "Phone",
+    img: "https://res.cloudinary.com/de5it79dw/image/upload/v1648491357/phone_fznttf.png",
+    desc1: "Choose the Best Phone",
+    desc2: "Watch these videos before you purchase your next phone.",
   },
   {
     _id: uuid(),
-    categoryName: "Frontend Development",
-    description:
-      "Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application",
+    categoryName: "Laptop",
+    img: "https://res.cloudinary.com/de5it79dw/image/upload/v1648491384/lap_qyyy4c.png",
+    desc1: "Take Expert's Opinion",
+    desc2: "Need expert opinion before buying your laptop? Watch these videos.",
   },
   {
     _id: uuid(),
-    categoryName: "Backend Development",
-    description:
-      "Backend Development is also known as server-side development. It is everything that the users don't see and contains behind-the-scenes activities that occur when performing any action on a website.",
+    categoryName: "Tech-News",
+    img: "https://res.cloudinary.com/de5it79dw/image/upload/v1650437722/51OBjWrLa0L_hhcj4p.jpg",
+    desc1: "Always Be Updated",
+    desc2: "Latest updates and news on what's going on in the Tech World.",
+  },
+  {
+    _id: uuid(),
+    categoryName: "Tech-Conspiracy",
+    img: "https://res.cloudinary.com/de5it79dw/image/upload/v1650437315/image_nwrgjv.jpg",
+    desc1: "Know the Unknown",
+    desc2: "Watch the Deep, Dark consipracies of the Tech World.",
   },
 ];
