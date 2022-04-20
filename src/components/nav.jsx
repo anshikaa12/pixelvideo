@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Nav() {
   return (
@@ -8,30 +8,30 @@ function Nav() {
         <div className="first-nav">
           <img
             src="https://res.cloudinary.com/de5it79dw/image/upload/v1650394802/pixelvideologo_bbmywr.png"
-            alt=""
+            alt="text"
           />
         </div>
         <div className="mid-nav flex-row">
           <ul className="nav-links">
-            <Link className="li-link-a" to="/">
+            <NavLink className="li-link-a" to="/">
               {" "}
               <li className="li-link">Explore</li>
-            </Link>
-            <Link className="li-link-a" to="/product">
+            </NavLink>
+            <NavLink className="li-link-a" to="/product">
               {" "}
               <li className="li-link">Playlists</li>
-            </Link>
+            </NavLink>
           </ul>
         </div>
         <div className="last-nav flex-row">
           <input type="text" className="input-box" placeholder="Search" />
           <ul className="nav-connect nav-links">
-            <Link to="/user" className="nav-connect-a li-link-a">
+            <NavLink to="/user" className="nav-connect-a li-link-a">
               <li className="connect-link h6-text flex-col-center">
                 <i className="fas fa-user  h5-text"></i>
                 <p className="h6-text i-link-nav-name">User</p>
               </li>
-            </Link>
+            </NavLink>
           </ul>
         </div>
       </div>
