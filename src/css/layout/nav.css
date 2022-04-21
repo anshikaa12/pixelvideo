@@ -53,3 +53,28 @@ nav {
 .last-nav > input {
   width: 100%;
 }
+.nav-ham {
+  display: none;
+}
+.mid-nav {
+  display: flex;
+  flex-direction: row;
+}
+.last-nav {
+  display: flex;
+  flex-direction: row;
+}
+@media only screen and (max-width: 550px) {
+  .nav-ham {
+    display: block;
+  }
+  .mid-nav {
+    display: none;
+  }
+  .first-nav {
+    display: block;
+  }
+  .last-nav {
+    display: none;
+  }
+}

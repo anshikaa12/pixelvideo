@@ -1,0 +1,50 @@
+.vid-sidebar {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 19rem);
+  position: sticky;
+  top: 10rem;
+  left: 0;
+  align-self: flex-start;
+  z-index: 5;
+  padding: 3rem 0;
+  box-shadow: 0px 0px 10px 4px rgb(0 0 0 / 5%);
+  overflow-y: auto;
+  margin-bottom: 2rem;
+}
+
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.sidebar-item {
+  font-size: 2rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+.sidebar-item p {
+  font-size: 1rem;
+}
+@media only screen and (max-width: 550px) {
+  .vid-sidebar {
+    position: fixed;
+    left: -100%;
+    background-color: var(--bg-color);
+    width: 40%;
+    top: 10rem;
+    text-align: center;
+    gap: 0;
+    transition: 0.3s;
+    height: 100%;
+    padding: 3rem 0;
+  }
+  .sidebar-active {
+    left: 0;
+  }
+}

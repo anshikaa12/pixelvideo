@@ -1,2 +1,3 @@
 import Home from "../pages/home/home";
-export { Home };
+import VideoListing from "./videoListing/videoListing";
+export { Home, VideoListing };
