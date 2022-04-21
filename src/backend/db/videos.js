@@ -19,6 +19,7 @@ export const videos = [
       "https://res.cloudinary.com/de5it79dw/image/upload/v1650475112/channels4_profile_chwng0.jpg",
     views: 71_174_869,
     categoryName: "Phone",
+    actionContainer: false,
   },
   {
     _id: uuid(),
@@ -34,6 +35,7 @@ export const videos = [
       "  https://res.cloudinary.com/de5it79dw/image/upload/v1650476979/channels4_profile_1_up66zk.jpg",
     views: 71_174_869,
     categoryName: "Phone",
+    actionContainer: false,
   },
   {
     _id: uuid(),
@@ -49,6 +51,7 @@ export const videos = [
       " https://res.cloudinary.com/de5it79dw/image/upload/v1650477174/channels4_profile_2_urgw3k.jpg",
     views: 71_174_869,
     categoryName: "Phone",
+    actionContainer: false,
   },
   {
     _id: uuid(),
@@ -64,6 +67,7 @@ export const videos = [
       " https://res.cloudinary.com/de5it79dw/image/upload/v1650477379/channels4_profile_3_msokok.jpg",
     views: 71_174_869,
     categoryName: "Phone",
+    actionContainer: false,
   },
   {
     _id: uuid(),
@@ -79,6 +83,7 @@ export const videos = [
       " https://res.cloudinary.com/de5it79dw/image/upload/v1650477585/unnamed_1_chbiru.jpg",
     views: 71_174_869,
     categoryName: "Laptop",
+    actionContainer: false,
   },
   {
     _id: uuid(),
@@ -94,6 +99,7 @@ export const videos = [
       " https://res.cloudinary.com/de5it79dw/image/upload/v1650477926/unnamed_3_zsin7t.jpg",
     views: 71_174_869,
     categoryName: "Laptop",
+    actionContainer: false,
   },
   {
     _id: uuid(),
@@ -108,6 +114,7 @@ export const videos = [
       "https://res.cloudinary.com/de5it79dw/image/upload/v1650478112/channels4_profile_4_fvdknx.jpg",
     views: 71_174_869,
     categoryName: "Laptop",
+    actionContainer: false,
   },
   {
     _id: uuid(),
@@ -122,6 +129,7 @@ export const videos = [
       "https://res.cloudinary.com/de5it79dw/image/upload/v1650478244/channels4_profile_5_ox4pxb.jpg",
     views: 71_174_869,
     categoryName: "Laptop",
+    actionContainer: false,
   },
   {
     _id: uuid(),
@@ -137,6 +145,7 @@ export const videos = [
       "https://res.cloudinary.com/de5it79dw/image/upload/v1650476979/channels4_profile_1_up66zk.jpg",
     views: 71_174_869,
     categoryName: "Tech-News",
+    actionContainer: false,
   },
   {
     _id: uuid(),
@@ -152,6 +161,7 @@ export const videos = [
       "https://res.cloudinary.com/de5it79dw/image/upload/v1650477585/unnamed_1_chbiru.jpg",
     views: 71_174_869,
     categoryName: "Tech-News",
+    actionContainer: false,
   },
   {
     _id: uuid(),
@@ -167,6 +177,7 @@ export const videos = [
       "https://res.cloudinary.com/de5it79dw/image/upload/v1650478946/unnamed_4_fkfpu5.jpg",
     views: 71_174_869,
     categoryName: "Tech-News",
+    actionContainer: false,
   },
   {
     _id: uuid(),
@@ -182,6 +193,7 @@ export const videos = [
       "https://res.cloudinary.com/de5it79dw/image/upload/v1650479385/unnamed_5_wkslji.jpg",
     views: 71_174_869,
     categoryName: "Tech-Conspiracy",
+    actionContainer: false,
   },
   {
     _id: uuid(),
@@ -196,5 +208,6 @@ export const videos = [
       "https://res.cloudinary.com/de5it79dw/image/upload/v1650479385/unnamed_5_wkslji.jpg",
     views: 71_174_869,
     categoryName: "Tech-Conspiracy",
+    actionContainer: false,
   },
 ];

@@ -4,13 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useMobileView } from "../context/mobileViewContext";
 
 function Nav() {
-  const { mobileViewActive, setMobileViewActive } = useMobileView();
-
-  function hamClickHandler() {
-    setMobileViewActive(!mobileViewActive);
-    console.log(mobileViewActive);
-  }
-
+  const { toggleDispatch } = useMobileView();
   return (
     <nav>
       <div className="nav">
@@ -44,7 +38,10 @@ function Nav() {
           </ul>
         </div>
         <div className="nav-ham">
-          <i class="fas fa-bars h3-text" onClick={hamClickHandler}></i>
+          <i
+            className="fas fa-bars h3-text"
+            onClick={() => toggleDispatch({ type: "MOBILE_VIEW" })}
+          ></i>
         </div>
       </div>
     </nav>

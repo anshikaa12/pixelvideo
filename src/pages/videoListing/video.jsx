@@ -1,5 +1,5 @@
 import React from "react";
-import { useCategory } from "../../services/categoriesApi";
+
 import VideoListCard from "./videoListCard";
 
 function Video() {
