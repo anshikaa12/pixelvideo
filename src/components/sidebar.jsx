@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useMobileView } from "../context/mobileViewContext";
 
 function Sidebar() {
-  const { toggleState, toggleReducer } = useMobileView();
+  const { toggleState } = useMobileView();
   return (
     <div
       className={
@@ -13,12 +14,16 @@ function Sidebar() {
     >
       <ul className="sidebar-list flex-col-center">
         <li className="sidebar-item">
-          <i className="fas fa-home"></i>
-          <p className="foot-p">Home</p>
+          <Link to="/">
+            <i className="fas fa-home"></i>
+            <p className="foot-p">Home</p>
+          </Link>
         </li>
         <li className="sidebar-item">
-          <i className="far fa-compass"></i>
-          <p className="foot-p">Explore</p>
+          <Link to="/videolisting">
+            <i className="far fa-compass"></i>
+            <p className="foot-p">Explore</p>
+          </Link>
         </li>
         <li className="sidebar-item">
           <i className="fas fa-folder-plus"></i>
