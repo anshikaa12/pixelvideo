@@ -16,12 +16,10 @@ function Nav() {
         </div>
         <div className="mid-nav">
           <ul className="nav-links">
-            <NavLink className="li-link-a" to="/">
-              {" "}
+            <NavLink className="li-link-a" to="/videolisting">
               <li className="li-link">Explore</li>
             </NavLink>
             <NavLink className="li-link-a" to="/product">
-              {" "}
               <li className="li-link">Playlists</li>
             </NavLink>
           </ul>

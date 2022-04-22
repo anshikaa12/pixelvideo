@@ -1,16 +1,21 @@
 import React from "react";
+import { useCategory } from "../../services/categoriesApi";
 
 import VideoListCard from "./videoListCard";
 
 function Video() {
+  const { category } = useCategory();
   return (
     <div className="video-sec">
       <div className="category-tag-container">
         <div className="chip h5-text">All</div>
-        <div className="chip h5-text">Phones</div>
-        <div className="chip h5-text">Laptops</div>
-        <div className="chip h5-text">Tech News</div>
-        <div className="chip h5-text">Tech conspiracy</div>
+        {/* {category.map((item) => {
+          return (
+            <div key={item.categoryName} className="chip h5-text">
+              {item.categoryName}
+            </div>
+          );
+        })} */}
       </div>
       <div className="video-list column-3-grid">
         <VideoListCard />
