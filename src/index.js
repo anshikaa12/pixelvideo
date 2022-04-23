@@ -6,6 +6,7 @@ import { makeServer } from "./server";
 import { BrowserRouter as Router } from "react-router-dom";
 import { MobileViewProvider } from "./context/mobileViewContext";
 import { createRoot } from "react-dom/client";
+import { CategoryFilterProvider } from "./context/filterCategoryContext";
 
 // Call make Server
 makeServer();
@@ -13,10 +14,12 @@ const container = document.getElementById("root");
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
 root.render(
   <React.StrictMode>
-    <MobileViewProvider>
-      <Router>
-        <App />
-      </Router>
-    </MobileViewProvider>
+    <CategoryFilterProvider>
+      <MobileViewProvider>
+        <Router>
+          <App />
+        </Router>
+      </MobileViewProvider>
+    </CategoryFilterProvider>
   </React.StrictMode>
 );

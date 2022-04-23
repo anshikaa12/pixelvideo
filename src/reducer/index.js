@@ -1,2 +1,3 @@
 import { toggleReducer } from "./toggelReducer";
-export { toggleReducer };
+import { categoryFilterReducer } from "./categoryFilterReducer";
+export { toggleReducer, categoryFilterReducer };
