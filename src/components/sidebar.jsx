@@ -29,10 +29,12 @@ function Sidebar() {
           <i className="fas fa-folder-plus"></i>
           <p className="foot-p">Playlists</p>
         </li>
-        <li className="sidebar-item">
-          <i className="fas fa-thumbs-up"></i>
-          <p className="foot-p">Liked</p>
-        </li>
+        <Link to="/likedvideos">
+          <li className="sidebar-item">
+            <i className="fas fa-thumbs-up"></i>
+            <p className="foot-p">Liked</p>
+          </li>
+        </Link>
         <li className="sidebar-item">
           <i className="fas fa-bookmark"></i>
           <p className="foot-p">Watch Later</p>
