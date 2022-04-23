@@ -1,6 +1,15 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
+import { useCategoryFilter } from "../../context/filterCategoryContext";
+import { useCategory } from "../../services/categoriesApi";
 function HomeHero() {
+  const { categoryFilterDispatch } = useCategoryFilter();
+  const { category } = useCategory();
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = `/videolisting`;
+    navigate(path);
+  };
   return (
     <div className="hero-sec">
       <img
@@ -11,7 +20,18 @@ function HomeHero() {
       <div className="hero-text flex-col-center">
         <h1 className="main-h1">Welcome To PixelVideo</h1>
         <h2 className="main-h2">Explore the top videos in the tech world!</h2>
-        <button className="btn btn-accent-outline">Explore</button>
+        <button
+          className="btn btn-accent-outline"
+          onClick={() => {
+            categoryFilterDispatch({
+              type: "ALL_CATEGORY_FILTER",
+              payload: category.map((item) => item.categoryName),
+            });
+            routeChange();
+          }}
+        >
+          Explore
+        </button>
       </div>
     </div>
   );

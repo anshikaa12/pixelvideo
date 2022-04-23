@@ -1,8 +1,15 @@
 import React from "react";
+import { useCategoryFilter } from "../../context/filterCategoryContext";
 import { useCategory } from "../../services/categoriesApi";
-
+import { useNavigate } from "react-router-dom";
 function TrendingVideo() {
   const { category } = useCategory();
+  const { categoryFilterDispatch } = useCategoryFilter();
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = `/videolisting`;
+    navigate(path);
+  };
   return category.map((item, index) => {
     return (
       <div className="trending-container">
@@ -25,6 +32,14 @@ function TrendingVideo() {
             <h4 className="main-h4">{item.desc2}</h4>
             <button
               className={index % 2 === 0 ? "btn btn-primary" : "btn btn-accent"}
+              onClick={() => {
+                categoryFilterDispatch({ type: "NOTALL_CATEGORY_FILTER" });
+                categoryFilterDispatch({
+                  type: "CATEGORY_FILTER",
+                  payload: item.categoryName,
+                });
+                routeChange();
+              }}
             >
               Check Now
             </button>

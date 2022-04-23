@@ -16,15 +16,21 @@
   flex-wrap: wrap;
   gap: 2rem;
 }
+
 .chip {
   border: 1px solid var(--accent-color);
   padding: 1rem 1.5rem;
   border-radius: 5rem;
   cursor: pointer;
+  background-color: var(--bg-color);
 }
+
 .chip:hover {
   background-color: var(--accent-color);
   color: var(--bg-color);
+}
+.chip:focus {
+  background-color: var(--accent-color);
 }
 
 .basic-card {
