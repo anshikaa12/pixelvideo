@@ -35,10 +35,12 @@ function Sidebar() {
             <p className="foot-p">Liked</p>
           </li>
         </Link>
-        <li className="sidebar-item">
-          <i className="fas fa-bookmark"></i>
-          <p className="foot-p">Watch Later</p>
-        </li>
+        <Link to="/watchlatervideos">
+          <li className="sidebar-item">
+            <i className="fas fa-bookmark"></i>
+            <p className="foot-p">Watch Later</p>
+          </li>
+        </Link>
         <li className="sidebar-item">
           <i className="fas fa-history"></i>
           <p className="foot-p">History</p>

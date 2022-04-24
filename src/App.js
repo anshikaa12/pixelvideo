@@ -1,6 +1,6 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import { Home, VideoListing, LikedVideos } from "./pages";
+import { Home, VideoListing, LikedVideos, WatchLaterVid } from "./pages";
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/videolisting" element={<VideoListing />} />
         <Route path="/likedvideos" element={<LikedVideos />} />
+        <Route path="/watchlatervideos" element={<WatchLaterVid />} />
       </Routes>
     </div>
   );

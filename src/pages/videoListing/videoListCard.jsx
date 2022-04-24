@@ -2,6 +2,7 @@ import React from "react";
 import { useCategoryFilter } from "../../context/filterCategoryContext";
 import { useLikedVideoContext } from "../../context/likedVideoContext";
 import { useMobileView } from "../../context/mobileViewContext";
+import { useWatchLaterContext } from "../../context/watchLaterContext";
 import { categoryFilteredList } from "../../reducer/categoryFilterReducer";
 import { useCategory } from "../../services/categoriesApi";
 function VideoListCard() {
@@ -9,6 +10,7 @@ function VideoListCard() {
   const { categoryFilterState, categoryFilterDispatch } = useCategoryFilter();
   const { category } = useCategory();
   const { likedVideoState, likedVideoDispatch } = useLikedVideoContext();
+  const { watchLaterState, watchLaterDispatch } = useWatchLaterContext();
   function getUpdatedList() {
     if (categoryFilterState.categoryFilter.length === 0) {
       categoryFilterDispatch({
@@ -50,7 +52,16 @@ function VideoListCard() {
                 }
               >
                 <ul className="action-btn-list flex-col">
-                  <li className="action-btn-item">
+                  <li
+                    className="action-btn-item"
+                    onClick={() => {
+                      watchLaterDispatch({
+                        type: "ADD_LATER_VIDEO",
+                        payload: item,
+                      });
+                      toggleDispatch({ type: "ACTION_BTN", payload: item._id });
+                    }}
+                  >
                     <i className="fas fa-plus-circle h5-text"></i>
                     <span className="h5-text">Watch Later</span>
                   </li>
