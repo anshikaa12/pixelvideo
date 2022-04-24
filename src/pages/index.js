@@ -1,3 +1,4 @@
 import Home from "../pages/home/home";
 import VideoListing from "./videoListing/videoListing";
-export { Home, VideoListing };
+import LikedVideos from "./likedVideos/likedVideos";
+export { Home, VideoListing, LikedVideos };

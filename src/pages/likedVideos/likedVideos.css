@@ -1,0 +1,35 @@
+.liked-videos-sec {
+  width: 100%;
+  padding: 4rem 6rem;
+}
+.liked-sec-img h5 {
+  font-weight: 400;
+}
+.liked-sec-list {
+  padding: 0 3rem;
+  overflow-y: auto;
+}
+.liked-videos {
+  max-height: 80vh;
+}
+.liked-card-head {
+  align-items: center;
+}
+.card-icon {
+  margin-left: auto;
+}
+.header-text {
+  width: 100%;
+}
+.liked-basic-card {
+  width: 100%;
+  max-height: 10rem;
+  margin-bottom: 2rem;
+}
+.liked-card-img {
+  max-height: 10rem;
+}
+.liked-card-head i {
+  transform: translateY(-2px);
+  cursor: pointer;
+}

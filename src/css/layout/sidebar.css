@@ -27,6 +27,10 @@
   align-items: center;
   justify-content: center;
   gap: 2px;
+  cursor: pointer;
+}
+.sidebar-item :hover {
+  color: var(--primary-color);
 }
 .sidebar-item p {
   font-size: 1rem;

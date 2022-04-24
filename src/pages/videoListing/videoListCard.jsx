@@ -1,5 +1,6 @@
 import React from "react";
 import { useCategoryFilter } from "../../context/filterCategoryContext";
+import { useLikedVideoContext } from "../../context/likedVideoContext";
 import { useMobileView } from "../../context/mobileViewContext";
 import { categoryFilteredList } from "../../reducer/categoryFilterReducer";
 import { useCategory } from "../../services/categoriesApi";
@@ -7,6 +8,7 @@ function VideoListCard() {
   const { toggleState, toggleDispatch } = useMobileView();
   const { categoryFilterState, categoryFilterDispatch } = useCategoryFilter();
   const { category } = useCategory();
+  const { likedVideoState, likedVideoDispatch } = useLikedVideoContext();
   function getUpdatedList() {
     if (categoryFilterState.categoryFilter.length === 0) {
       categoryFilterDispatch({
@@ -25,7 +27,7 @@ function VideoListCard() {
     }
   }
   const updatedList = getUpdatedList();
-  console.log(categoryFilterState.categoryFilter);
+  console.log(likedVideoState.likedVidState);
   return updatedList.map((item) => {
     return (
       <div key={item._id} className="basic-card">
@@ -52,7 +54,19 @@ function VideoListCard() {
                     <i className="fas fa-plus-circle h5-text"></i>
                     <span className="h5-text">Watch Later</span>
                   </li>
-                  <li className="action-btn-item">
+                  <li
+                    className="action-btn-item"
+                    onClick={() => {
+                      likedVideoDispatch({
+                        type: "ADD_LIKED_VIDEO",
+                        payload: item,
+                      });
+                      likedVideoDispatch({
+                        type: "LIKED_ACTIVE_STATE",
+                      });
+                      toggleDispatch({ type: "ACTION_BTN", payload: item._id });
+                    }}
+                  >
                     <i className="fas fa-plus-circle h5-text"></i>
                     <span className="h5-text">Liked Videos</span>
                   </li>
