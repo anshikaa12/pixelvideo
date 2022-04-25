@@ -1,5 +1,6 @@
 import React from "react";
 import { useCategoryFilter } from "../../context/filterCategoryContext";
+import { useHistoryContext } from "../../context/historyContext";
 import { useLikedVideoContext } from "../../context/likedVideoContext";
 import { useMobileView } from "../../context/mobileViewContext";
 import { useWatchLaterContext } from "../../context/watchLaterContext";
@@ -9,8 +10,9 @@ function VideoListCard() {
   const { toggleState, toggleDispatch } = useMobileView();
   const { categoryFilterState, categoryFilterDispatch } = useCategoryFilter();
   const { category } = useCategory();
-  const { likedVideoState, likedVideoDispatch } = useLikedVideoContext();
-  const { watchLaterState, watchLaterDispatch } = useWatchLaterContext();
+  const { likedVideoDispatch } = useLikedVideoContext();
+  const { watchLaterDispatch } = useWatchLaterContext();
+  const { historyDispatch } = useHistoryContext();
   function getUpdatedList() {
     if (categoryFilterState.categoryFilter.length === 0) {
       categoryFilterDispatch({
@@ -29,10 +31,18 @@ function VideoListCard() {
     }
   }
   const updatedList = getUpdatedList();
-  console.log(likedVideoState.likedVidState);
   return updatedList.map((item) => {
     return (
-      <div key={item._id} className="basic-card">
+      <div
+        key={item._id}
+        className="basic-card"
+        onClick={() =>
+          historyDispatch({
+            type: "ADD_TO_HISTORY",
+            payload: item,
+          })
+        }
+      >
         <img src={item.thumbnail} className="card-img" />
         <div className="card-body">
           <div className="flex-row vid-title">

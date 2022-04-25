@@ -41,10 +41,12 @@ function Sidebar() {
             <p className="foot-p">Watch Later</p>
           </li>
         </Link>
-        <li className="sidebar-item">
-          <i className="fas fa-history"></i>
-          <p className="foot-p">History</p>
-        </li>
+        <Link to="/history">
+          <li className="sidebar-item">
+            <i className="fas fa-history"></i>
+            <p className="foot-p">History</p>
+          </li>
+        </Link>
       </ul>
     </div>
   );
