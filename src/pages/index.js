@@ -3,4 +3,16 @@ import VideoListing from "./videoListing/videoListing";
 import LikedVideos from "./likedVideos/likedVideos";
 import WatchLaterVid from "./watchLaterVideos/watchLaterVid";
 import History from "./history/history";
-export { Home, VideoListing, LikedVideos, WatchLaterVid, History };
+import SignUp from "./signUp/signUp";
+import Login from "./signUp/login";
+import SignUpForm from "./signUp/signupForm";
+export {
+  Home,
+  VideoListing,
+  LikedVideos,
+  WatchLaterVid,
+  History,
+  SignUp,
+  Login,
+  SignUpForm,
+};
