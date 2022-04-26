@@ -6,6 +6,8 @@ import {
   LikedVideos,
   WatchLaterVid,
   History,
+  SignUp,
+  Login,
 } from "./pages";
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <Route path="/likedvideos" element={<LikedVideos />} />
         <Route path="/watchlatervideos" element={<WatchLaterVid />} />
         <Route path="/history" element={<History />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );

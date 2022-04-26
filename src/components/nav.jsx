@@ -27,7 +27,7 @@ function Nav() {
         <div className="last-nav">
           <input type="text" className="input-box" placeholder="Search" />
           <ul className="nav-connect nav-links">
-            <NavLink to="/user" className="nav-connect-a li-link-a">
+            <NavLink to="/signup" className="nav-connect-a li-link-a">
               <li className="connect-link h6-text flex-col-center">
                 <i className="fas fa-user  h5-text"></i>
                 <p className="h6-text i-link-nav-name">User</p>
