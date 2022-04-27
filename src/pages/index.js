@@ -6,6 +6,7 @@ import History from "./history/history";
 import SignUp from "./signUp/signUp";
 import Login from "./signUp/login";
 import SignUpForm from "./signUp/signupForm";
+import SingleVidPage from "./singleVideoPage/singleVidPage";
 export {
   Home,
   VideoListing,
@@ -15,4 +16,5 @@ export {
   SignUp,
   Login,
   SignUpForm,
+  SingleVidPage,
 };

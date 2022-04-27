@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useCategoryFilter } from "../../context/filterCategoryContext";
 import { useHistoryContext } from "../../context/historyContext";
 import { useLikedVideoContext } from "../../context/likedVideoContext";
 import { useMobileView } from "../../context/mobileViewContext";
+import { useSingleVidContext } from "../../context/singleVidContext";
 import { useWatchLaterContext } from "../../context/watchLaterContext";
 import { categoryFilteredList } from "../../reducer/categoryFilterReducer";
 import { useCategory } from "../../services/categoriesApi";
@@ -13,6 +15,7 @@ function VideoListCard() {
   const { likedVideoDispatch } = useLikedVideoContext();
   const { watchLaterDispatch } = useWatchLaterContext();
   const { historyDispatch } = useHistoryContext();
+  const { singleVidDispatch } = useSingleVidContext();
   function getUpdatedList() {
     if (categoryFilterState.categoryFilter.length === 0) {
       categoryFilterDispatch({
@@ -43,7 +46,19 @@ function VideoListCard() {
           })
         }
       >
-        <img src={item.thumbnail} className="card-img" />
+        <Link to="/singlevid">
+          <img
+            style={{ height: "100%" }}
+            src={item.thumbnail}
+            className="card-img"
+            onClick={() =>
+              singleVidDispatch({
+                type: "GO_TO_SINGLE_VID_PAGE",
+                payload: item,
+              })
+            }
+          />
+        </Link>
         <div className="card-body">
           <div className="flex-row vid-title">
             <h4 className="card-title">{item.title}</h4>

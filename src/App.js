@@ -8,6 +8,7 @@ import {
   History,
   SignUp,
   Login,
+  SingleVidPage,
 } from "./pages";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/history" element={<History />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/singlevid" element={<SingleVidPage />} />
       </Routes>
     </div>
   );
