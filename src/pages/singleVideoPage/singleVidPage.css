@@ -1,0 +1,53 @@
+.single-vid-wrapper {
+  width: 100%;
+  padding: 4rem 3rem;
+  height: 100%;
+}
+
+.player-wrapper {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.player {
+  height: 35rem;
+}
+.vid-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.action-vid-btn {
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  padding: 2rem 0;
+}
+.action-vid-btn i {
+  cursor: pointer;
+  color: none;
+}
+.clicked {
+  color: var(--primary-color);
+}
+.not-clicked {
+  color: var(--alt-text-color);
+}
+.action-vid-btn i:hover {
+  color: var(--primary-color);
+}
+.channel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media only screen and (max-width: 550px) {
+  .player-wrapper {
+    width: 100%;
+  }
+}
