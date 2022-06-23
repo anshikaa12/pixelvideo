@@ -78,6 +78,7 @@
 
 .action-btn-list {
   list-style: none;
+  padding: 1rem;
 }
 .action-btn-item {
   padding: 1rem 0px;
@@ -85,7 +86,7 @@
   flex-direction: row;
   gap: 1rem;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   cursor: pointer;
 }
 .action-btn-item:hover {

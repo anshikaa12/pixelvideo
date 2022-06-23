@@ -1,0 +1,51 @@
+.playlist-icon-container {
+  position: relative;
+}
+.playlist-action-container {
+  width: 17rem;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  position: absolute;
+  top: 2.5rem;
+  left: 2.3rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.playlist-action-show {
+  display: flex;
+}
+.playlist-action-hide {
+  display: none;
+}
+.hidden-class {
+  display: none;
+}
+.playlist-add-btn {
+  margin-top: 1rem;
+}
+.playlist-sec {
+  padding: 3rem 5rem;
+}
+.playlist-box {
+  height: 20rem;
+  width: 30rem;
+  background-color: var(--primary-color);
+  opacity: 0.7;
+  position: relative;
+}
+.playlist-box:hover {
+  transition: 0.3 ease;
+  transform: translateY(2px);
+}
+.playlist-name {
+  color: var(--bg-color);
+  opacity: 1;
+  text-shadow: 4px 4px rgb(0 0 0 / 10%);
+}
+
+.del-icon {
+  font-size: 1.5rem;
+}
+.del-icon:hover {
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}

@@ -9,7 +9,9 @@ import {
   SignUp,
   Login,
   SingleVidPage,
+  Playlist
 } from "./pages";
+import SinglePlaylistPage from "./pages/playlist/singlePlaylistPage";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/singlevid" element={<SingleVidPage />} />
+        <Route path="/playlist" element={<Playlist/>}/>
+        <Route path="/playlist/:playlistid" element={<SinglePlaylistPage/> }/>
       </Routes>
     </div>
   );
